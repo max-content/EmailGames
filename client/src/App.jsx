@@ -4,6 +4,8 @@ import ToDoView from "./views/ToDoView";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
+import Footer from "./components/Footer"
+
 const darkTheme = createTheme({
       palette: {
         mode: 'dark',
@@ -29,6 +31,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ToDoView />} />
       </Routes>
+      <Footer />
     </ThemeProvider>
     
 

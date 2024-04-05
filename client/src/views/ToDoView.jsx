@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
-
+import Typography from "@mui/material/Typography"
 import AddTask from "../components/AddTask";
 import ToDo from "../components/ToDo";
 import PuppyPhoto from "../components/PuppyPhoto";
@@ -29,6 +29,8 @@ const ToDoView = () => {
 
     return (
     <>
+        <Typography variant="h1" sx={{m:1}}> Email Games </Typography>
+        <Typography variant="h6" sx={{m:2}}> Add your important emails to the list and when you check them all off you'll get a reward. </Typography>
         <Grid container spacing={6} sx={{m:1}}>
             <Grid item sx={4}>
                 <Paper>
@@ -37,7 +39,7 @@ const ToDoView = () => {
                 </Paper>
             </Grid>
             <Grid item sx={8}>
-                <Paper>
+                <Paper sx={{p:2}}>
                     {allTasksComplete && <PuppyPhoto />}
                 </Paper>
             </Grid>
