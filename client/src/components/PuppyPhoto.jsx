@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Box from "@mui/material/Box"
+import Card from "@mui/material/Card"
+import CardMedia from "@mui/material/CardMedia"
+import Typography from "@mui/material/Typography"
 
 const PuppyPhoto = () => {
   const [photoUrl, setPhotoUrl] = useState("");
@@ -18,10 +22,15 @@ const PuppyPhoto = () => {
   return (
     <div>
       {photoUrl && (
-        <div>
-          <h2>Random Puppy Photo</h2>
-          <img src={photoUrl} alt="Puppy" style={{ maxWidth: "100%" }} />
-        </div>
+        <Box component="div">
+          <Typography component="h2" sx={{p:3}}>Congrats! You did it. Here's a random puppy for your hard work.</Typography>
+          <Card sx={{
+            // w: 30, 
+            borderRadius: 4,
+            }}>
+            <CardMedia component="img" src={photoUrl} alt="Puppy" />
+          </Card>
+        </Box>
       )}
     </div>
   );

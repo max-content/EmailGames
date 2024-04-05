@@ -1,4 +1,8 @@
 import React, {useState} from "react";
+
+import Grid from "@mui/material/Grid";
+import Paper from "@mui/material/Paper";
+
 import AddTask from "../components/AddTask";
 import ToDo from "../components/ToDo";
 import PuppyPhoto from "../components/PuppyPhoto";
@@ -25,9 +29,19 @@ const ToDoView = () => {
 
     return (
     <>
-        <AddTask onAddTask={addTask} setAllTasksComplete={setAllTasksComplete} />
-        <ToDo tasks={tasks} setTasks={setTasks} isTaskComplete={isTaskComplete} />
-        {allTasksComplete && <PuppyPhoto />}
+        <Grid container spacing={6} sx={{m:1}}>
+            <Grid item sx={4}>
+                <Paper>
+                    <AddTask onAddTask={addTask} setAllTasksComplete={setAllTasksComplete} />
+                    <ToDo tasks={tasks} setTasks={setTasks} isTaskComplete={isTaskComplete} />
+                </Paper>
+            </Grid>
+            <Grid item sx={8}>
+                <Paper>
+                    {allTasksComplete && <PuppyPhoto />}
+                </Paper>
+            </Grid>
+        </Grid>
     </>
         )
 };
