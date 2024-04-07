@@ -39,9 +39,7 @@ const ToDoView = () => {
                 </Paper>
             </Grid>
             <Grid item sx={8}>
-                <Paper sx={{p:2}}>
                     {allTasksComplete && <PuppyPhoto />}
-                </Paper>
             </Grid>
         </Grid>
     </>

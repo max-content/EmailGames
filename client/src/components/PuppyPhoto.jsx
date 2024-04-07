@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Box from "@mui/material/Box"
 import Card from "@mui/material/Card"
+import Paper from "@mui/material/Paper"
 import CardMedia from "@mui/material/CardMedia"
 import Typography from "@mui/material/Typography"
 
@@ -20,7 +21,7 @@ const PuppyPhoto = () => {
   }, []);
 
   return (
-    <div>
+    <Paper>
       {photoUrl && (
         <Box component="div">
           <Typography component="h2" sx={{p:3}}>Congrats! You did it. Here's a random puppy for your hard work.</Typography>
@@ -32,7 +33,7 @@ const PuppyPhoto = () => {
           </Card>
         </Box>
       )}
-    </div>
+    </Paper>
   );
 };
 
